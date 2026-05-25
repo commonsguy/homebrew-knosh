@@ -9,7 +9,11 @@ class Knosh < Formula
 
   def install
     libexec.install "knosh-all.jar"
-    bin.write_jar_script libexec/"knosh-all.jar", "knosh", java_version: "21"
+    (bin/"knosh").write <<~EOS
+      #!/bin/bash
+      export JAVA_HOME="#{Formula["openjdk@21"].opt_prefix}"
+      exec "${JAVA_HOME}/bin/java" -jar "#{libexec}/knosh-all.jar" "$@"
+    EOS
   end
 
   test do
