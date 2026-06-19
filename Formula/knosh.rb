@@ -1,8 +1,8 @@
 class Knosh < Formula
   desc "AI coding agent CLI"
   homepage "https://knosh.commonsware.com"
-  url "https://knosh.commonsware.com/binaries/0.1.0/knosh-all.jar"
-  sha256 "068fc7e0c41a5cae00d0ef19b96aa3ecbb9ea8cf4f742ee91e90bd89203f4c15"
+  url "https://knosh.commonsware.com/binaries/0.2.0/knosh-all.jar"
+  sha256 "f73bd7c126189638123a639ef29eb6602ad128dc589427caf028c1321a04982d"
   license "Apache-2.0"
 
   depends_on "openjdk@21"

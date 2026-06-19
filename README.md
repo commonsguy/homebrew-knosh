@@ -1,9 +1,20 @@
-# Knosh
+# homebrew-knosh
 
-Knosh is an LLM agent for "one-shot" prompts and structured software development activities. While it has a robust
-suite of tools, it specifically excludes any sort of arbitrary shell access (e.g., a Bash tool). It is written in
-Kotlin, and so it is a Kotlin no-shell (Knosh) agent.
+Homebrew tap for [Knosh](https://knosh.commonsware.com), an AI coding agent CLI.
 
-For full project documentation, visit [the Knosh site](https://knosh.commonsware.com).
+## Installation
 
-See [CHANGELOG.md](CHANGELOG.md) for a history of notable changes.
+```sh
+brew install commonsguy/knosh/knosh
+```
+
+Or tap first:
+
+```sh
+brew tap commonsguy/knosh
+brew install knosh
+```
+
+## Requirements
+
+Homebrew will automatically install OpenJDK 21 as a dependency if it is not already present.
