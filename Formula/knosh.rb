@@ -11,7 +11,7 @@ class Knosh < Formula
     libexec.install "knosh-all.jar"
     (bin/"knosh").write <<~EOS
       #!/bin/bash
-      export JAVA_HOME="#{Formula["openjdk@21"].opt_prefix}"
+      export JAVA_HOME="#{formula_opt_prefix("openjdk@21")}"
       exec "${JAVA_HOME}/bin/java" -jar "#{libexec}/knosh-all.jar" "$@"
     EOS
   end
